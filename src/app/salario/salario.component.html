@@ -5,7 +5,7 @@
       <label for="salarioInput">Ingrese su salario:</label>
       <input type="number" class="form-control" id="salarioInput" [(ngModel)]="salarioInput" name="salarioInput">
     </div>
-    <button type="button" class="btn btn-primary" (click)="calcularSalario()">Calcular</button>
+    <button type="button" class="btn btn-primary" (click)="calcularSalario()" (click)="calcularSalarioDetalle()">Calcular</button>
   </form>
 
   <div *ngIf="salarioLiquido !== 0">
