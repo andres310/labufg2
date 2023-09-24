@@ -1,1 +1,19 @@
-<p>salario works!</p>
+<div class="container">
+  <h2>Calculadora de Salario Neto</h2>
+  <form>
+    <div class="form-group">
+      <label for="salarioInput">Ingrese su salario:</label>
+      <input type="number" class="form-control" id="salarioInput" [(ngModel)]="salarioInput" name="salarioInput">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="calcularSalario()">Calcular</button>
+  </form>
+
+  <div *ngIf="salarioLiquido !== 0">
+    <h3>Resultados:</h3>
+    <p>Salario Bruto: {{ salarioInput | currency:'USD':'symbol' }}</p>
+    <p>Renta: {{ descuentoRenta | currency:'USD':'symbol' }}</p>
+    <p>AFP: {{ descuentoAFP | currency:'USD':'symbol' }}</p>
+    <p>ISSS: {{ descuentoISSS | currency:'USD':'symbol' }}</p>
+    <p>Salario Neto: {{ salarioLiquido | currency:'USD':'symbol' }}</p>
+  </div>
+</div>
