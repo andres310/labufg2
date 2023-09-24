@@ -32,7 +32,13 @@ export class SalarioService {
   }
 
   calcularSalarioLiquido(salario: number): number {
-    // TODO: Calcular descuentos
-    return 0;
+    const descuentoRenta = this.calcularDescuentoRenta(salario);
+    const descuentoAFP = this.calcularDescuentoAFP(salario);
+    const descuentoISSS = this.calcularDescuentoISSS(salario);
+
+    // Calcular salario neto restando los descuentos
+    const salarioNeto = salario - descuentoRenta - descuentoAFP - descuentoISSS;
+
+    return salarioNeto;
   }
 }
