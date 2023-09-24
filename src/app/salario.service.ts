@@ -27,8 +27,8 @@ export class SalarioService {
   }
 
   calcularDescuentoISSS(salario: number): number {
-    // TODO: Calcular descuento de ISSS
-    return 0;
+    const descuentoISSS = salario * 0.03; // 3% de descuento de ISSS
+    return descuentoISSS;
   }
 
   calcularSalarioLiquido(salario: number): number {
