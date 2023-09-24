@@ -22,8 +22,8 @@ export class SalarioService {
   }
 
   calcularDescuentoAFP(salario: number): number {
-    // TODO: Calcular descuento de AFP
-    return 0;
+    const descuentoAFP = salario * 0.0725; // 7.25% de descuento de AFP
+    return descuentoAFP;
   }
 
   calcularDescuentoISSS(salario: number): number {
